@@ -1,0 +1,78 @@
+<div class="container">
+  <h1 style="color: #7417d7; text-align: center;">Crud Operations</h1>
+  <form>
+
+  <div class="mb-3">
+   
+
+    <label for="formGroupExampleInput" class="form-label">Student name</label>
+    <input type="text" class="form-control" id="Studentname" name="Studentname" placeholder="Studentname" [(ngModel)]="myForm.Studentname" ngModel>
+
+  </div>
+  <br><br>
+
+  <div class="mb-3">
+    
+    <label for="formGroupExampleInput2" class="form-label">DOB</label>
+    <input type="date" class="form-control" id="DOB" name="DOB" placeholder="Date of Birth" [(ngModel)]="myForm.DOB" ngModel>
+
+  </div>
+  <br><br>
+
+  <div class="mb-3">
+
+    <label for="formGroupExampleInput3" class="form-label">Gender</label>
+    <br>
+    <input type="radio" name="Gender" value="Male" ngModel [(ngModel)]="myForm.Gender"/>Male &nbsp;
+    <input type="radio" name="Gender" value="Female"  ngModel [(ngModel)]="myForm.Gender"/>Female
+  
+  </div>
+  <br><br>
+
+  <div class="mb-3">
+    
+    <label for="formGroupExampleInput4" class="form-label">Department</label>
+    <input type="text" class="form-control" id="Dept" name="Dept" placeholder="Department" [(ngModel)]="myForm.Dept" ngModel>
+
+  </div>
+  <br><br>
+
+  <div>
+    <button type="submit" class="btn-btn-primary" (click)="addStudent(myForm)" *ngIf="!isEdit">Add Student</button>&nbsp;
+    <button type="submit" class="btn-btn-primary" (click)="updateStudent(myForm)">Update</button>
+  </div>
+  <br><br>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">STUDENT ID</th>
+        <th scope="col">STUDENT NAME</th>
+        <th scope="col">DATE OF BIRTH</th>
+        <th scope="col">GENDER</th>
+        <th scope="col">DEPARTMENT</th>
+        <th scope="col">EDIT</th>
+        <th scope="col">DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.Studentname}}</td>
+        <td>{{student.DOB}}</td>
+        <td>{{student.Gender}}</td>
+        <td>{{student.Dept}}</td>
+        <td><button type="submit" (click)="editStudent(student)">EDIT</button></td>
+        <td><button type="submit" (click)="deleteStudent(student)">DELETE</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</form>
+
+
+
+  
+
+</div>

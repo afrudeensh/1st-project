@@ -1,0 +1,25 @@
+{
+  "details": [
+    {
+      "Studentname": "Bheema",
+      "DOB": "2023-05-15",
+      "Gender": "Female",
+      "Dept": "IT",
+      "id": 1
+    },
+    {
+      "Studentname": "Raghu",
+      "DOB": "2023-05-15",
+      "Gender": "Male",
+      "Dept": "Mechanical",
+      "id": 2
+    },
+    {
+      "Studentname": "Mathews",
+      "DOB": "2023-05-15",
+      "Gender": "Male",
+      "Dept": "Civil",
+      "id": 3
+    }
+  ]
+}
